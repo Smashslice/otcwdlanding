@@ -126,6 +126,25 @@ header h1 {
     border-radius: 25px;
 }
 
+/* Hovers for the links */
+
+.redirectprofessional:hover,.redirecttravelblog:hover,.redirecthappytails:hover{
+    text-decoration: none;
+    transform: translate(-5px,-5px);
+    transform: rotate(1deg);
+    box-shadow: 5px 5px #925E30;
+}
+
+.redirecttravelblog:hover{
+    box-shadow: 5px 5px #254E70;
+    transform: rotate(-1deg);
+}
+
+.redirecthappytails:hover{
+    box-shadow: 5px 5px black;
+}
+
+
 /* #rightbtn,#leftbtn {
     width: 150px;
     height: 75px;
