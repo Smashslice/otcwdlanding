@@ -15,88 +15,154 @@
     --accent-color: #254E70 ;
 }
 
-.background {
+/* Griddy wrapper yeehaw */
+
+.wrapper {
+    display: grid;
     background-color: #1f2324;
+}
+
+/* Header Section */
+
+.head {
     width: 50%;
-    margin: 0 25%;
+    justify-self: center;
 }
 
 header h1 {
-    position: relative;
-    top: 30px;
     text-align: center;
     font-size: 16rem;
-    margin: -15px 0 0 0;
+    margin: 30px 0 0 0;
     font-family: "Ruge Boogie", cursive;
     font-weight: 400;
     font-style: normal;
     color: var(--primary-color);
     background-color:var(--thirdiary-color);
+    border-radius: 25px;
 }
 
-.navcontainer {
-    position: relative;
-    top: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0 7.5%;
-    width: 85%;
-    height: 80px;
-    background-color: var(--secondary-color);
-}
-
-.innernavbar {
-    height: 80px;
-    width: 60%;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-.navlink {
-    text-decoration: none;
-    color: var(--primary-color);
-    padding: 1.5rem 2rem;
-    font-size: 2rem;
-}
-
-a:hover { 
-    background-color: rgba(37, 78, 112, 0.2);
-    border-radius: 5px;
-}
-
-a:hover{
-    color: var(--accent-color);
-    text-shadow: 2px 2px var(--thirdiary-color);
-}
-
-nav p {
-    background-color: var(--accent-color);
-    height: 70px;
-    width: 5px;
-    margin: 5px 0 -5px 0;
-}
-
+/* Slides section */
 
 .funbar {
+    display: grid;
+    grid-template-rows: 1fr 500px 1fr;
+    grid-template-columns: 2fr 120px 4fr 120px 2fr;
+}
+
+/* Button Subsection */
+
+#leftbtn,#rightbtn {
+    font-size: 3.5rem;
+    font-family: "Ruge Boogie", cursive;
+    font-weight: 600;
+    width: 120px;
+    height: 75px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 15px;
+    outline: none;
+    background-color: var(--thirdiary-color);
+    color: var(--primary-color);
+
+}
+
+#leftbtn{
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+#rightbtn{
+    grid-area: 2 / 4 / 2 / 4;
+}
+
+#leftbtn:hover,#rightbtn:hover{
+    box-shadow: 2px 2px var(--primary-color);
+    cursor: pointer;
+    transform: translate(-5px,-5px)
+}
+
+/* Slide content subsection */
+
+#professional,#travelblog,#happytails {
+    grid-area: 2 / 3 / 2 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+#travelblog,#happytails {
+    display: none;
+}
+
+.redirectprofessional, .redirecttravelblog, .redirecthappytails {
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 100%;
-    margin: 15% 12.5%;
+    width: 90%;
+    height: 50%;
+    padding: 30px 0;
+    border-radius: 40px;
+    background-color: #291911;
+}
+
+.redirecttravelblog{
+    height: 310px;
+    background-color: #22374F;
+    padding: 0px;
+}
+
+.redirecthappytails{
+    height: 65%;
+    background-color: white;
+    padding: 5px;
+}
+
+.redirecttravelblog img{
+    width: auto;
+    height: 310px;
+}
+
+.redirecthappytails img{
+    width: 80%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* #rightbtn,#leftbtn {
+    width: 150px;
+    height: 75px;
+    border-radius: 15px;
+    outline: none;
+    background-color: var(--accent-color);
+    font-weight: bold;
+    color: #555555;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+#leftbtn {
+    position: relative;
+}
+
+#rightbtn {
+}
+
+#rightbtn:hover,#leftbtn:hover{
+    box-shadow: var(--accent-color) 2px 2px;
+    transform: scale(1.1,1.1);
 }
 
 #professional{
-    position: absolute;
+    position: relative;
+    grid-area: slide;
 }
 
 #travelblog{
-    position: absolute;
+    position: relative;
     left: 200%;
     display: none;
 }
 
 #happytails {
-    position: absolute;
+    position: relative;
     left: 200%;
     display: none;
 }
@@ -161,31 +227,7 @@ nav p {
     box-shadow: 5px 5px #925E30;
 }
 
-#rightbtn,#leftbtn {
-    position: absolute;
-    right: 22.5%;
-    top: 550px;
-    width: 75px;
-    height: 75px;
-    border-radius: 15px;
-    outline: none;
-    background-color: var(--accent-color);
-    font-weight: bold;
-    color: #555555;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-}
-
-#leftbtn {
-    position: absolute;
-    left: 22.5%;
-    top: 550px;
-}
-
-#rightbtn:hover,#leftbtn:hover{
-    box-shadow: var(--accent-color) 2px 2px;
-    transform: scale(1.1,1.1);
-}
+*/
 
 .slideleft{
     animation: slideleft 1s ease-in forwards;
@@ -193,12 +235,7 @@ nav p {
 
 .slideleftin{
     animation: slideleftin 1s ease-in forwards;
-}
-
-.display{
-    display: block;
-}
-
+} 
 
 @keyframes slideleft{
     0%{
@@ -255,16 +292,46 @@ nav p {
         width: 100%; 
         margin: 0;
     }
+}
+
+@media(max-width: 1605px){
     header h1{
-        font-size: 12rem;
+        font-size: 10rem;
     }
-    a img{
-        width: 100%;
+}
+
+@media(max-width: 1000px){
+    .head {
+        width: 75%;
     }
-    #travelblog,#professional{
-        height: 200px;
+    header h1 {
+        font-size: 8rem;
     }
-    #rightbtn,#leftbtn {
-        margin-top: 200px;
+    .redirecthappytails,.redirectprofessional,.redirecttravelblog{
+        height: 50%;
+    }
+    .redirecttravelblog img{
+        height: 85%;
+        width: auto;
+        justify-self: center;
+        align-self: center;
+    }
+    .funbar{
+        grid-template-rows: 1fr 400px 120px 1fr;
+        grid-template-columns: 2fr 120px 2fr 120px 2fr;
+    }
+    #leftbtn,#rightbtn{
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    #professional,#travelblog,#happytails{
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+}
+
+@media(max-width: 550px){
+    header h1 {
+        font-size: 4rem;
     }
 }
