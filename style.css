@@ -146,7 +146,8 @@ nav p {
 }
 
 .redirecttravelblog img{
-    width: 65%;
+    justify-self: center;
+    width: 100%;
     padding: 0px;
     height: 264px;
     margin: 0 17.5%;
@@ -187,11 +188,11 @@ nav p {
 }
 
 .slideleft{
-    animation: slideleft 2s ease-in forwards;
+    animation: slideleft 1s ease-in forwards;
 }
 
 .slideleftin{
-    animation: slideleftin 2s ease-in forwards;
+    animation: slideleftin 1s ease-in forwards;
 }
 
 .display{
@@ -203,18 +204,8 @@ nav p {
     0%{
         left: 0;
     }
-    50%{
-        left: -50%;
-        opacity: 50%;
-    }
-    90%{
-        opacity: 0%;
-    }
     100%{
-        left: -500%;
-        display: none;
-        visibility: hidden;
-
+        left: -200%;
     }
 }
 
@@ -222,13 +213,6 @@ nav p {
     0%{
         left: -200%;
         opacity: 50%;
-        display: block;
-    }
-    50%{
-        left: -50%;
-    }
-    90%{
-        opacity: 100%;
     }
     100%{
         left: 0%;
@@ -237,26 +221,17 @@ nav p {
 
 
 .slideright{
-    animation: slideright 2s ease-in forwards;
+    animation: slideright 1s ease-in forwards;
 }
 
 .sliderightin{
-    animation: sliderightin 2s ease-in forwards;
+    animation: sliderightin 1s ease-in forwards;
 }
 
 
 @keyframes slideright{
     0%{
         left: 0%
-    }
-    50%{
-        left: 50%;
-        opacity: 50%;
-    }
-    90%{
-        opacity: 0%;
-        display: none;
-        visibility: hidden;
     }
     100%{
         left: 200%;
@@ -267,14 +242,7 @@ nav p {
 @keyframes sliderightin{
     0%{
         left: 200%;
-        display: block;
         opacity: 50%;
-    }
-    50%{
-        left: 50%;
-    }
-    90%{
-        opacity: 100%;
     }
     100%{
         left: 0%;
